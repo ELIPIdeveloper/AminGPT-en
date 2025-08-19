@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AminGPT is a Persian conversational AI model designed with a simple, human-like interface and intelligent response system. These chats are based on developed technologies and aim to provide precise, practical, and creative responses understandable to users.">
+  <title>AminGPT</title>
+  <style>
+    body {
+      direction: rtl;
+      background-color: #000;
+      color: #fff;
+      font-family: Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #111;
+      padding: 20px;
+      border-radius: 16px;
+    }
+    button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.7); /* Blue glow on hover */
+            transform: scale(1.025);
+        }
+    .profile-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 18px;
+      float: right;
+      margin-left: 15px;
+      border: 3px solid #fff;
+      transition: color 1s ease, transform 1s ease;
+    }
+    .video-wrapper {
+      width: 100%;
+      float: center;
+      border-radius: 20px; 
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,.55);
+    }
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+      outline: none;
+      background: #000;
+    }
+    video::-webkit-media-controls { display: none !important; }
+    video::-webkit-media-controls-enclosure { display: none !important; }
+
+    h1, h2 {
+      color: #00aaff;
+      text-align: right;
+    }
+    p {
+      text-align: right;
+      color: #ddd;
+      font-size: 16px;
+      transition: color 1s ease, transform 1s ease;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    p:hover {
+      transform: scale(0.97);
+      transition: transform 0.7s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+      transition: color 0.7s ease, transform 0.7s ease;
+    }
+
+    .center-img {
+      width: 90%;
+      margin: 20px auto;
+      display: block;
+      border-radius: 24px;             
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transition: color 1s ease, transform 1s ease;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a>
+      <img src="AminGPTic.jpg" alt="AminGPT" class="profile-icon">
+    </a>
+    <p>A conversational AI model in Persian designed with a simple, human-like interface and intelligent responses. These chats are based on developed technologies and aim to provide precise, practical, and creative responses understandable to users.</p>
+    <br>
+    <p>AminGPT is an advanced native AI assistant designed to simplify users’ digital life. The app combines powerful AI with a simple and stylish interface to provide a unique experience of interacting with modern technologies.</p>
+    <a>
+      <img src="AminGPT.jpg" alt="Mohammad Amin Moradi introducing AminGPT" class="center-img">
+    </a>
+    <br>
+    
+    <p>With AminGPT, you can easily answer scientific, educational, and everyday questions, translate texts, find creative ideas for content creation, and access extensive and reliable scientific sources. The app fully supports Persian and English and allows adjusting response tone from formal to friendly to match user preferences.
+      <br>
+      Its minimal and modern interface makes using the app easy and enjoyable for everyone—from beginners to professionals. AminGPT can act as a personal consultant, educational assistant, research tool, and companion in daily tasks.</p>
+    <br>
+    <a>
+      <img src="AminGPTm.jpg" alt="AminGPT" class="center-img">
+    </a>
+    <br>
+    <p>Key features of AminGPT include fast and precise responses, multi-language support, customization options, access to extensive resources, and user-friendly design. This app is not just an AI tool but an intelligent companion ready to help users learn, create content, and solve daily challenges.</p>
+    <br>
+    <div class="video-wrapper" aria-label="Video without buttons that plays on hover">
+        <video id="vid" playsinline muted preload="metadata" poster="poster.jpg"></video>
+      </div>
+    <script>
+    const video = document.getElementById('vid');
+    const source = document.createElement('source');
+    source.src = 'AminGPT.mp4';
+    source.type = 'video/mp4';
+    video.appendChild(source);
+
+    const wrapper = video.closest('.video-wrapper');
+
+    wrapper.addEventListener('mouseenter', () => {
+      video.play().catch(() => {});
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      video.pause();
+    });
+
+    wrapper.addEventListener('touchstart', () => {
+      if (video.paused) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    }, { passive: true });
+
+    video.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+    <br>
+    <p>
+      Overall, AminGPT provides a complete AI experience, allowing users to quickly receive the best answers and solutions, access extensive scientific and informational resources, and simplify their daily and professional tasks.
+    <br>
+    <p>
+      <a href="https://elipideveloper.github.io/Mohammad-Amin-Moradi/">Creator: Mohammad Amin Moradi</a>
+    </p>
+    <a href="https://myket.ir/app/appinventor.ai_mohammadaminmoradi1133.AI">
+        <button>Download Now</button>
+    </a>
+  </div>
+</body>
+</html>
